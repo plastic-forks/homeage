@@ -130,10 +130,10 @@ with lib; let
       if isActivation
       then ''
         --slurpfile new "$newGenFile" \
-        '$old - $new | .[]' |
+        '$old - $new | .[] | .[]' |
       ''
       else ''
-        '$old | .[]' |
+        '$old | .[] | .[]' |
       ''
     }
       # Replace $UID with $(id -u). Don't use eval
